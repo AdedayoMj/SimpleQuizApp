@@ -7,7 +7,7 @@ export default class Navbar extends Component {
       <div>
         <nav className="nav-wrapper black ">
           <div className="container row">
-            <Link to="/" className="brand-logo col s2 m15">
+            <Link to="/" className="brand-logo col s1 m15">
               <span className="logo">QUIZ</span>
             </Link>
             <ul className="right">
