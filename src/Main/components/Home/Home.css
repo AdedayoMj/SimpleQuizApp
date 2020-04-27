@@ -1,0 +1,32 @@
+.text{
+color: white;
+margin-bottom: 20px;
+}
+.startUp{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: larger;
+    color: white;
+}
+.tableSt{
+    align-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    width: 480px;
+}
+.test{
+    padding-left: 100px ;
+    color: red;
+}
+.test2{
+    padding-left: 100px ;
+    color: green;
+}
+.head{
+    padding-left: 90px ;
+}
+.marg{
+    margin-left: 20px !important;
+}
