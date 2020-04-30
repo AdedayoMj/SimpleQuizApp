@@ -64,7 +64,7 @@ class FooterPage extends Component {
             </div>
           </div>
           <div class="footer-copyright">
-            <div class="container">© 2014 Copyright Adedayo Adegboye</div>
+            <div class="container">© 2020 Copyright Adedayo Adegboye</div>
           </div>
         </footer>
       );
