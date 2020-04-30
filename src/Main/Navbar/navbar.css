@@ -1,0 +1,28 @@
+.nav_cont{
+    height: 100px !important;
+}
+.logo_container{
+    width: 180px !important;
+}
+.nav_btn{
+    color: black;
+}
+.side_cont{
+   padding: 0.5rem 1.4rem 0rem 0rem;
+   font-size: 1.2rem;
+   line-height: 4rem;
+}
+.iconMat{
+    color: rgb(50, 107, 182);
+    text-transform:capitalize;
+    font-size:1.2rem;
+    background: transparent;
+    color: black;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.iconMat:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}

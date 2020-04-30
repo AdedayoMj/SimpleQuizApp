@@ -14,7 +14,7 @@ export default class Questions extends Component {
     isFinished: false,
     questionCount: 1,
     scorePercent: 0,
-    allAnswers: []
+    allAnswers: [],
   };
 
   componentDidMount() {
@@ -28,7 +28,7 @@ export default class Questions extends Component {
           disabled: true,
           questions: QuizData[this.state.currentQuestion].question,
           options: QuizData[this.state.currentQuestion].options,
-          answer: QuizData[this.state.currentQuestion].answer
+          answer: QuizData[this.state.currentQuestion].answer,
         };
       });
     }
@@ -39,7 +39,7 @@ export default class Questions extends Component {
       return {
         questions: QuizData[this.state.currentQuestion].question,
         answer: QuizData[this.state.currentQuestion].answer,
-        options: QuizData[this.state.currentQuestion].options
+        options: QuizData[this.state.currentQuestion].options,
       };
     });
   };
@@ -48,22 +48,22 @@ export default class Questions extends Component {
     const { myAnswer, answer, score } = this.state;
     if (myAnswer === answer) {
       this.setState({
-        score: score + 1
+        score: score + 1,
       });
     }
     this.state.allAnswers.push(myAnswer);
     this.setState({
       currentQuestion: this.state.currentQuestion + 1,
-      questionCount: this.state.questionCount + 1
+      questionCount: this.state.questionCount + 1,
     });
   };
 
-  checkAnswer = answer => {
+  checkAnswer = (answer) => {
     this.setState({ myAnswer: answer, disabled: false });
   };
   scoreInPercent = () => {
     this.setState({
-      scorePercent: (this.state.score / 4) * 100
+      scorePercent: (this.state.score / 4) * 100,
     });
   };
   finishQuiz = () => {
@@ -71,12 +71,12 @@ export default class Questions extends Component {
     if (this.state.currentQuestion === QuizData.length - 1) {
       this.state.allAnswers.push(myAnswer);
       this.setState({
-        isFinished: true
+        isFinished: true,
       });
     }
     if (myAnswer === answer) {
       this.setState({
-        score: score + 1
+        score: score + 1,
       });
     }
     setTimeout(() => {
@@ -95,18 +95,18 @@ export default class Questions extends Component {
       isFinished,
       scorePercent,
       score,
-      allAnswers
+      allAnswers,
     } = this.state;
 
     if (isFinished) {
       return (
-        <div className="container">
+        <div className="container main_cont">
           <div className="result">
             <h3 className="text">
               {" "}
               {`Test Finished !!!, your Final score is ${scorePercent}%`}{" "}
             </h3>
-            <div>
+            <div className="card">
               {score > 2 ? (
                 <div className="text">
                   You have passed !!!. Start{" "}
@@ -169,36 +169,42 @@ export default class Questions extends Component {
       );
     } else {
       return (
-        <div className="container">
-          <span className="text">{`Questions ${questionCount}  out of ${QuizData.length} `}</span>
-          <h3 className="text">{this.state.questions} </h3>
-
-          {options.map(option => (
-            <p
-              key={option.id}
-              className={`ui floating message options
+        <div className="container main_cont">
+          <div className="card ui floating message ">
+            <span>{`Questions ${questionCount}  out of ${QuizData.length} `}</span>
+            <h4>{this.state.questions} </h4>
+          </div>
+          <div className="card ui floating message card_mg">
+            {options.map((option) => (
+              <p
+                key={option.id}
+                className={`ui floating message options
          ${myAnswer === option ? "selected" : null}
          `}
-              onClick={() => this.checkAnswer(option)}
-            >
-              {option}
-            </p>
-          ))}
-          {currentQuestion < QuizData.length - 1 && (
-            <button
-              className="ui inverted button"
-              disabled={this.state.disabled}
-              onClick={this.nextQuestions}
-            >
-              Next
-            </button>
-          )}
-          {/* //adding a finish button */}
-          {currentQuestion === QuizData.length - 1 && (
-            <button className="ui inverted button" onClick={this.finishQuiz}>
-              Finish
-            </button>
-          )}
+                onClick={() => this.checkAnswer(option)}
+              >
+                {option}
+              </p>
+            ))}
+            {currentQuestion < QuizData.length - 1 && (
+              <button
+                className="ui inverted button NextBtn"
+                disabled={this.state.disabled}
+                onClick={this.nextQuestions}
+              >
+                Next
+              </button>
+            )}
+            {/* //adding a finish button */}
+            {currentQuestion === QuizData.length - 1 && (
+              <button
+                className="ui inverted button NextBtn"
+                onClick={this.finishQuiz}
+              >
+                Finish
+              </button>
+            )}
+          </div>
         </div>
       );
     }

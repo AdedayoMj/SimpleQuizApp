@@ -1,0 +1,23 @@
+.card_container{
+    width: 400px;
+    margin-top: 100px;
+    padding-left: 20px;
+    padding-right:20px ;
+}
+.btn_col{
+    text-transform:capitalize;
+    font-size:1.2rem;
+    background: transparent;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: black;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.btn_col:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}
+.btn_col:focus{
+    outline:none;
+}

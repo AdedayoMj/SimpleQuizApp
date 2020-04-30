@@ -1,0 +1,19 @@
+.style_btn{
+background: transparent;
+color: black;
+cursor:pointer;
+margin:0.2rem 0.2rem 0.2rem 0rem;
+transition:all 0.5s ease-in-out;
+
+}
+.style_btn:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}
+.initBtn{
+    background:rgb(50, 107, 182);
+}
+.initBtn:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}

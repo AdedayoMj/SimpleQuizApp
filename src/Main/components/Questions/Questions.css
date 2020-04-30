@@ -1,20 +1,16 @@
-body {
-    font-size: 1.2rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background: #bdc3c7; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #2c3e50,
-      #bdc3c7
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
-  }
-  
+
+  .main_cont{
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
   .result {
     margin-top: 20px;
   }
-  
+  .card_mg{
+    background: transparent;
+    border: none;
+}
   .options {
     cursor: pointer;
     border: 2px solid black;
@@ -29,8 +25,8 @@ body {
   ul {
     list-style-type: none;
   }
-  .text{
-    color: white;
+  .card_container{
+    margin-top: 10px !important;
   }
   .textanswr{
     color: green;
@@ -39,3 +35,20 @@ body {
   .textanswr2{
     color: red;
   }
+  .NextBtn{
+    text-transform:capitalize;
+    font-size:1.4rem;
+    background: white;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: rgb(50, 107, 182);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    width:150px;
+    cursor:pointer;
+    margin:0.2rem 0.5rem 0.2rem 0;
+    transition:all 0.5s ease-in-out;
+    }
+    .NextBtn:hover{
+        background:rgb(50, 107, 182);
+        color: white
+    }

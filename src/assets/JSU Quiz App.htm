@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="stylesheet" href="./JSU Quiz App_files/materialize.min.css">
+    <link href="./JSU Quiz App_files/icon" rel="stylesheet">
+    <title>JSU  Quiz App</title>
+  <style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+</style><style type="text/css">
+  .main_cont{
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+  .result {
+    margin-top: 20px;
+  }
+  .card_mg{
+    background: transparent;
+    border: none;
+}
+  .options {
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .selected {
+    background: linear-gradient(to right, #74ebd5, #acb6e5) !important;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  .card_container{
+    margin-top: 10px !important;
+  }
+  .textanswr{
+    color: green;
+  }
+  
+  .textanswr2{
+    color: red;
+  }
+  .NextBtn{
+    text-transform:capitalize;
+    font-size:1.4rem;
+    background: white;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: rgb(50, 107, 182);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    width:150px;
+    cursor:pointer;
+    margin:0.2rem 0.5rem 0.2rem 0;
+    transition:all 0.5s ease-in-out;
+    }
+    .NextBtn:hover{
+        background:rgb(50, 107, 182);
+        color: white
+    }</style><style type="text/css">.nav_cont{
+    height: 100px !important;
+}
+.logo_container{
+    width: 180px !important;
+}
+.nav_btn{
+    color: black;
+}
+.side_cont{
+   padding: 0.5rem 1.4rem 0rem 0rem;
+   font-size: 1.2rem;
+   line-height: 4rem;
+}
+.iconMat{
+    color: rgb(50, 107, 182);
+    text-transform:capitalize;
+    font-size:1.2rem;
+    background: transparent;
+    color: black;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.iconMat:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}
+</style><style type="text/css">.style_btn{
+background: transparent;
+color: black;
+cursor:pointer;
+margin:0.2rem 0.2rem 0.2rem 0rem;
+transition:all 0.5s ease-in-out;
+
+}
+.style_btn:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}
+.initBtn{
+    background:rgb(50, 107, 182);
+}
+.initBtn:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}</style><style type="text/css">body {
+    font-size: 1.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c3e50,
+      #bdc3c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: url(/static/media/quiz2.c24de98d.jpeg) no-repeat center center fixed;
+    background-size: cover;
+  }
+.main{
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+.text{
+text-align: center;
+}
+.btn_mg{
+    margin-top: 20px;
+}
+
+.startUp{
+    text-transform:capitalize;
+    font-size:1.4rem;
+    background: white;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: rgb(50, 107, 182);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    width:150px;
+    cursor:pointer;
+    margin:0.2rem 0.5rem 0.2rem 0;
+    transition:all 0.5s ease-in-out;
+    }
+    .startUp:hover{
+        background:rgb(50, 107, 182);
+        color: white
+    }
+.tableSt{
+    align-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    width: 450px;
+}
+.test{
+    padding-left: 40px ;
+    color: red;
+}
+.test2{
+    padding-left: 45px ;
+
+    color: green;
+}
+.head{
+    padding-left: 85px ;
+}
+.marg{
+    margin-left: 20px !important;
+}
+.card_mg{
+    background: transparent;
+    border: none;
+}</style><style type="text/css">.card_container{
+    width: 400px;
+    margin-top: 100px;
+    padding-left: 20px;
+    padding-right:20px ;
+}
+.btn_col{
+    text-transform:capitalize;
+    font-size:1.2rem;
+    background: transparent;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: black;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.btn_col:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}
+.btn_col:focus{
+    outline:none;
+}</style><style type="text/css">
+.card_container{
+    width: 400px;
+    margin-top: 40px;
+    padding-left: 20px;
+    padding-right:20px ;
+}
+.input_length{
+    width: 300px !important;
+}
+.btn_col{
+    text-transform:capitalize;
+    font-size:1.2rem;
+    background: transparent;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: black;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.btn_col:hover{
+    background:rgb(50, 107, 182);
+    color: white
+}
+.btn_col:focus{
+    outline:none;
+}</style><style type="text/css">.pg{
+    background-color: black;
+}
+</style><style type="text/css">.main{
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+.m_card{
+    padding: 30px;
+    height: 700px;
+}</style><style type="text/css">.card_marg{
+    margin-top: 50px;
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+.card_cont{
+   height: 500px;
+   background-color: rgb(50, 107, 182);
+   border:0.05rem solid rgb(50, 107, 182);
+   border-radius: 0.5rem;
+}
+.card_cont2{
+    height: 420px;
+    background-color:lightgrey;
+    border-radius: 0.5rem;
+}
+.Btn_s{
+    text-transform:capitalize;
+    font-size:1.4rem;
+    background: lightgrey;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: rgb(50, 107, 182);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    width:150px;
+    cursor:pointer;
+    margin:0rem 0rem 0.2rem 0;
+    transition:all 0.5s ease-in-out;
+    margin-top: -8px !important;
+    }
+    .Btn_s:hover{
+        background:cornsilk;
+        color: rgb(50, 107, 182)
+    }
+
+    .ana1{
+        font-size: 50px;
+        font-weight: 900;
+        padding: 40px;
+    }
+    .ana2{
+        font-size: 30px;
+    }</style><style type="text/css">.card_marg{
+    margin-top: 50px;
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+.card_cont{
+   height: 500px;
+   background-color: rgb(50, 107, 182);
+   border:0.05rem solid rgb(50, 107, 182);
+   border-radius: 0.5rem;
+}
+.card_cont2{
+    height: 420px;
+    background-color:lightgrey;
+    border-radius: 0.5rem;
+}
+.Btn_s{
+    text-transform:capitalize;
+    font-size:1.4rem;
+    background: lightgrey;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: rgb(50, 107, 182);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    width:150px;
+    cursor:pointer;
+    margin:0rem 0rem 0.2rem 0;
+    transition:all 0.5s ease-in-out;
+    margin-top: -8px !important;
+    }
+    .Btn_s:hover{
+        background:cornsilk;
+        color: rgb(50, 107, 182)
+    }
+
+    .dd1{
+        font-size: 70px;
+        font-weight: 900;
+        padding: 70px;
+    }
+    .dd2{
+        font-size: 30px;
+    }</style><script charset="utf-8" src="./JSU Quiz App_files/main.f39c869e01d116263c74.hot-update.js"></script><script charset="utf-8" src="./JSU Quiz App_files/main.d47b0b5dbb9487eb5885.hot-update.js"></script><script charset="utf-8" src="./JSU Quiz App_files/main.613feb39a9d9a3e60614.hot-update.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><div><div role="navigation" style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: hidden;"><div style="z-index: 2; position: absolute; top: 0px; bottom: 0px; transition: -webkit-transform 0.3s ease-out 0s; will-change: transform; overflow-y: auto; background: white; width: 100px; left: 0px; transform: translateX(-100%);"><div class="side_cont"><ul class="right"><li><a aria-current="page" class="style_btn active" href="http://localhost:3000/">Home</a></li><li><a class="style_btn" href="http://localhost:3000/about">About</a></li><li><a aria-current="page" class="style_btn active" href="http://localhost:3000/">Logout</a></li><li><span class="btn btn-floating initBtn">Ma</span></li></ul></div></div><div style="z-index: 1; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s; background-color: rgba(0, 0, 0, 0.3);"></div><div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow-y: auto; transition: left 0.3s ease-out 0s, right 0.3s ease-out 0s;"></div></div><nav class="nav-extended"><div class="nav-wrapper white nav_cont "><div class="container row "><a class="brand-logo col s1 m15" href="http://localhost:3000/"><img class="logo_container" alt="logo" src="./JSU Quiz App_files/jsc_logo.122d7d92.png"></a><div class=" hide-on-med-and-down"><ul class="right"><li><a aria-current="page" class="style_btn active" href="http://localhost:3000/">Home</a></li><li><a class="style_btn" href="http://localhost:3000/about">About</a></li><li><a aria-current="page" class="style_btn active" href="http://localhost:3000/">Logout</a></li><li><span class="btn btn-floating initBtn">Ma</span></li></ul></div></div><div class="container"><div class="hide-on-med-and-up right"><button class="iconMat "><i class="large material-icons">apps</i></button></div></div></div></nav></div><div class="container main"><div class="card"><h4 class="text">Please read through the instructions</h4><div class="text">You will start with difficulty level one, you must have atleast 75% score to proceed to the next level</div></div><div class="card card_mg"><div><div class="tableSt"><tr><th>Levels</th><th class="head">Score</th><th class="head">Completion</th></tr></div><div class="tableSt"><tr><td>Anatomy Terms</td><td class="test test">0%</td><div><td class="test test"><div>Not Completed</div></td><td><a classname="marg" href="http://localhost:3000/anatomy">Start</a></td></div></tr></div><div class="tableSt"><tr><td>Disease Terms</td><td class="test test">0%</td><div><td class="test test"><div>Not Completed</div></td><td></td></div></tr></div></div><div class="btn_mg "><button class="startUp">REFRESH</button></div></div></div><footer class="page-footer pg"><div class="container"><div class="row"><div class="col l6 s12"><h5 class="white-text">About</h5><p class="grey-text text-lighten-4">This app is designed to a brief assessment used in education and similar fields to measure growth in knowledge, abilities, and/or skills. The mission is to get users to study related textbooks in order to answer the questions provided. At the end of the assessments students will have devloped extensive knowledge in their respective fields. </p></div><div class="col l4 offset-l2 s12"><h5 class="white-text">Links</h5><ul><li><a href="http://localhost:3000/"><a class="grey-text text-lighten-3" href="http://localhost:3000/#!">Home</a></a></li><li><a href="http://localhost:3000/about"><a class="grey-text text-lighten-3" href="http://localhost:3000/#!">About</a></a></li><li><a href="http://localhost:3000/"><a class="grey-text text-lighten-3" href="http://localhost:3000/#!">License</a></a></li><li><a href="http://localhost:3000/"><a class="grey-text text-lighten-3" href="http://localhost:3000/#!">Terms and Conditons</a></a></li></ul></div></div></div><div class="footer-copyright"><div class="container">© 2014 Copyright Adedayo Adegboye</div></div></footer></div></div>
+    <script src="./JSU Quiz App_files/materialize.min.js"></script>
+  <script src="./JSU Quiz App_files/bundle.js"></script><script src="./JSU Quiz App_files/1.chunk.js"></script><script src="./JSU Quiz App_files/main.chunk.js"></script><script src="./JSU Quiz App_files/main.8395fe831c608284f06a.hot-update.js"></script>
+
+</body></html>

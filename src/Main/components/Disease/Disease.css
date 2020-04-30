@@ -1,0 +1,44 @@
+.card_marg{
+    margin-top: 50px;
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+.card_cont{
+   height: 500px;
+   background-color: rgb(50, 107, 182);
+   border:0.05rem solid rgb(50, 107, 182);
+   border-radius: 0.5rem;
+}
+.card_cont2{
+    height: 420px;
+    background-color:lightgrey;
+    border-radius: 0.5rem;
+}
+.Btn_s{
+    text-transform:capitalize;
+    font-size:1.4rem;
+    background: lightgrey;
+    border:0.05rem solid rgb(50, 107, 182);
+    color: rgb(50, 107, 182);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    width:150px;
+    cursor:pointer;
+    margin:0rem 0rem 0.2rem 0;
+    transition:all 0.5s ease-in-out;
+    margin-top: -8px !important;
+    }
+    .Btn_s:hover{
+        background:cornsilk;
+        color: rgb(50, 107, 182)
+    }
+
+    .dd1{
+        font-size: 50px;
+        font-weight: 900;
+        padding: 40px;
+    }
+    .dd2{
+        font-size: 30px;
+    }
