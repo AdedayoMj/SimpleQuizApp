@@ -10,6 +10,7 @@ import FooterPage from "./Main/Footer";
 import About from "./Main/components/About";
 import Anatomy from "./Main/components/Anatomy";
 import Disease from "./Main/components/Disease";
+import ErrorPage from "./Main/components/ErrorPage";
 
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -52,6 +53,7 @@ export default class App extends Component {
             <Route path="/disease" component={Disease} />
             <Route path="/level1" component={Questions} />
             <Route path="/level2" component={Questions2} />
+            <Route component={ErrorPage} />
           </Switch>
           <FooterPage />
         </div>

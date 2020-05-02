@@ -1,70 +1,80 @@
 export const QuizData = [
   {
     id: 0,
+    numberQ: `Question 1`,
     question: `The spiral tube that makes up a portion of the inner ear is called?`,
     options: [`Cochlea`, `Cornea`, `Cricoid`, `Colon`],
     answer: `Cochlea`,
-    info: `‘MONEY’ held multiple world titles in five weight classes and is not only 
-            regarded as one of the greatest defensive boxers ever but the most accurate. 
-            Forbes listed the champion as the highest earning athlete in the world from 2012 to 2015.`,
-    links: `https://www.dailytelegraph.com.au/sport/boxing-mma/the-ten-best-boxers-of-all-time-ranked-sees-surprise-rating-for-muhammad-ali/news-story/6b6bcb9613d3fd47a192f45551599f8f`,
+    info: `The cochlea is the part of the inner ear involved in hearing. It is a spiral-shaped cavity in the bony labyrinth,
+            in humans making 2.75 turns around its axis, the modiolus.
+            The name cochlea derives from Ancient Greek κοχλίας (kokhlias), meaning 'spiral, snail shell.`,
+    links: `https://en.wikipedia.org/wiki/Cochlea`,
   },
   {
     id: 1,
+    numberQ: `Question 2`,
     question: `What term means pertaining to the ribs?`,
     options: [`Condyle`, `Costal`, `Cortex`, `Cochlea`],
     answer: `Costal`,
-    info: `Completing CEO Elon Musk’s “Secret Master Plan,” in 2016, 
-            Tesla introduced Model 3, a low-priced, high-volume 
-            electric vehicle that began production in 2017.`,
-    links: `https://www.tesla.com/about`,
+    info: `Costals are bars of hyaline cartilage that connect the ribs with the sternum.
+           There are a total of 12 ribs divided into three categories on the basis of
+          their articulation with the sternum.`,
+    links: `https://www.mananatomy.com/body-systems/skeletal-system/ribs-costal-cartilages`,
   },
   {
     id: 2,
+    numberQ: `Question 3`,
     question: `What term means pertaining to tears?`,
     options: [`Lateral`, `Leukocyte`, `Lacrimal`, `Intima`],
     answer: `Lacrimal`,
-    info: `Jeff Bezos is the world’s wealthiest person for the third year in a row, 
-            despite giving $36 billion worth of his Amazon stock to his ex-wife 
-            MacKenzie Bezos as part of their divorce settlement last summer`,
-    links: `https://www.forbes.com/billionaires/`,
+    info: `Tears are a clear liquid secreted by the lacrimal glands (tear gland) found in
+           the eyes of all land mammals (except for goats and rabbits). Their functions 
+           include lubricating the eyes (basal tears), removing irritants (reflex tears),
+            and aiding the immune system.`,
+    links: `https://en.wikipedia.org/wiki/Tears`,
   },
   {
     id: 3,
+    numberQ: `Question 4`,
     question: `What term that refers to the roof of the mouth is:`,
     options: [`Palate`, `Patella`, `Parotid`, `Pectoral`],
     answer: `Palate`,
-    info: `In the first World Cup final, held on July 30, 1930, 93,000 
-            spectators looked on as Uruguay defeated Argentina 4–2 in a 
-            rematch of the 1928 Olympic gold medal game.`,
-    links: `https://www.history.com/this-day-in-history/first-world-cup`,
+    info: `The palate /ˈpælɪt/ is the roof of the mouth in humans and other mammals.
+           It separates the oral cavity from the nasal cavity. A similar structure 
+           is found in crocodilians, but in most other tetrapods, the oral and nasal
+            cavities are not truly separated.`,
+    links: `https://en.wikipedia.org/wiki/Palate`,
   },
 ];
 
 export const QuizData2 = [
   {
     id: 0,
+    numberQ: `Question 1`,
     question: `Life threatening paralytic illness caused by an exotoxin`,
     options: [`Anthrax`, `Asbestosis`, `Asthma`, `Botulism`],
     answer: `Botulism`,
-    info: `After years of rumors and speculation, it was officially 
-            announced on January 9, 2007,[9] and was later released in 
-            the United States on June 29, 2007.`,
-    links: `https://en.wikipedia.org/wiki/IPhone_(1st_generation)`,
+    info: `Botulism is a disease caused by this neurotoxin (specifically
+           A, B, E, or F type neurotoxin); symptoms include a flaccid paralysis
+            (weakness or slackness) in various muscles. Bacteria called Clostridium
+             botulinum produce the neurotoxin. The neurotoxin paralyzes muscles and 
+             can be life threatening.`,
+    links: `https://www.medicinenet.com/botulism/article.htm#what_is_botulism`,
   },
   {
     id: 1,
+    numberQ: `Question 2`,
     question: `Eye disorder characterised by high intraocular pressure and optic nerve `,
     options: [`Cataracts`, `Epididymitis`, `Corneal abrasion`, `Glaucoma`],
     answer: `Glaucoma`,
-    info: `Alternatively, you can also use Ctrl + Insert. Insert is found on expanded keyboards
-           that include number pads (usually on zero) or alongside the Home key, and may be a 
-           more useful option if you are dealing with a lot of numeric data and your fingers 
-           rarely leave the number pad.`,
-    links: `https://www.digitaltrends.com/computing/windows-keyboard-shortcuts-cut-copy-paste-undo/`,
+    info: `Glaucoma is an eye disease that is often associated with elevated intraocular
+     pressure, in which damage to the eye (optic) nerve can lead to loss of vision and 
+     even blindness. Glaucoma is the leading cause of irreversible blindness in the world.`,
+    links: `https://www.medicinenet.com/glaucoma/article.htm`,
   },
   {
     id: 2,
+    numberQ: `Question 3`,
     question: `Inflammatory bowel disease possible affecting any part of the GI tract but commonly involving the terminal ileum`,
     options: [
       `Cytomegalovirus infection`,
@@ -73,12 +83,15 @@ export const QuizData2 = [
       `Creutzfeldt-jakob disease`,
     ],
     answer: `Crohn's disease`,
-    info: `A Kilobyte (kb or Kbyte) is approximately a thousand bytes 
-            (actually, 2 to the 10th power, or decimal 1,024 bytes).`,
-    links: `https://byte-notes.com/bit-byte-nibble-kilobyte/`,
+    info: `Crohn's disease (CD) can affect any part of the gastrointestinal tract but terminal ileum is the most frequent
+         localization as recognized by B. Crohn in its original description.Crohn’s disease, can extend right through the 
+         entire thickness of the bowel wall, from the mucosa, through the muscle, and can even include the thin outermost
+          layer of digestive tract cells (serosa).`,
+    links: `https://badgut.org/information-centre/a-z-digestive-topics/inflammatory-bowel-disease/`,
   },
   {
     id: 3,
+    numberQ: `Question 4`,
     question: `Inability to digest and absorb lactose, the main carbonhydrate in milk; stems from the insufficiency of the enzyme lactase`,
     options: [
       `Diverticular disease`,
@@ -87,8 +100,9 @@ export const QuizData2 = [
       `Lactose intolerance`,
     ],
     answer: `Lactose intolerance`,
-    info: `A web browser (commonly referred to as a browser) is a 
-            software application for accessing information on the World Wide Web.`,
-    links: `https://en.wikipedia.org/wiki/Web_browser`,
+    info: `Lactose intolerance is caused by a deficiency of the intestinal enzyme lactase that splits lactose into two smaller sugars,
+         glucose and galactose, and allows lactose to be absorbed from the intestine. Virtually all individuals are born with lactase 
+         and the ability to digest lactose.`,
+    links: `https://www.medicinenet.com/lactose_intolerance/article.htm`,
   },
 ];

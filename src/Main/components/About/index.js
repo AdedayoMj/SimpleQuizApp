@@ -1,8 +1,21 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import { loginUser } from "../../modules/auth";
+import { connect } from "react-redux";
 
 import "./About.css";
 
-export default class About extends Component {
+class About extends Component {
+  componentDidMount() {
+    if (!this.props.isAuthenticated) {
+      this.props.history.push("./signin");
+    }
+  }
+  componentDidUpdate() {
+    if (!this.props.isAuthenticated) {
+      this.props.history.push("./signin");
+    }
+  }
   render() {
     return (
       <div className="container main">
@@ -28,3 +41,13 @@ export default class About extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  loginError: state.auth.loginError,
+});
+const mapActionCreators = {
+  loginUser,
+};
+
+export default connect(mapStateToProps, mapActionCreators)(withRouter(About));

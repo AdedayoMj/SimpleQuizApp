@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { QuizData } from "../QuizData";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import { loginUser } from "../../modules/auth";
+import { connect } from "react-redux";
 
 import "./Questions.css";
 
-export default class Questions extends Component {
+class Questions extends Component {
   state = {
     currentQuestion: 0,
     myAnswer: [],
@@ -19,9 +21,15 @@ export default class Questions extends Component {
 
   componentDidMount() {
     this.loadQuestions();
+    if (!this.props.isAuthenticated) {
+      this.props.history.push("./signin");
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if (!this.props.isAuthenticated) {
+      this.props.history.push("./signin");
+    }
     if (this.state.currentQuestion !== prevState.currentQuestion) {
       this.setState(() => {
         return {
@@ -95,7 +103,6 @@ export default class Questions extends Component {
       isFinished,
       scorePercent,
       score,
-      allAnswers,
     } = this.state;
 
     if (isFinished) {
@@ -104,26 +111,30 @@ export default class Questions extends Component {
           <div className="result">
             <h3 className="text">
               {" "}
-              {`Test Finished !!!, your Final score is ${scorePercent}%`}{" "}
+              {`Test finished !!!, your final score is ${scorePercent}%`}{" "}
             </h3>
             <div className="card">
               {score > 2 ? (
                 <div className="text">
-                  You have passed !!!. Start{" "}
-                  <Link to="/level2"> Next Level</Link>
+                  <i className="textanswr"> You passed !!!</i>. Start next test
+                  by clicking next level button.
+                  <Link to="/disease"> Next Level</Link>
+                  <div>OR</div>
                   <div>
-                    <Link to="/">Continue Later</Link>
+                    Continue later by clicking on home page button.
+                    <Link to="/"> Go Back Home</Link>
                   </div>
                 </div>
               ) : (
                 <div className="text">
-                  {`You have failed, your score is ${scorePercent}%`}. Please{" "}
-                  <Link to="/">try again</Link>
+                  <i className="textanswr2"> You failed !!!</i>. Please click on
+                  home page button to try again.{" "}
+                  <Link to="/"> Go Back Home</Link>
                 </div>
               )}
             </div>
-            <div className="row">
-              <div className="col s12 m6">
+            <div>
+              {/* <div className="col s12 m6">
                 <p>
                   <div className="text">Your Answers:</div>
                   <ul>
@@ -134,35 +145,37 @@ export default class Questions extends Component {
                     ))}
                   </ul>
                 </p>
-              </div>
+              </div> */}
 
-              <div className="col s12 m6">
-                <p>
-                  <div className="text">
-                    The correct answer's for the questions:
-                  </div>
+              <p>
+                <div className="text card">
+                  The correct answer's for the questions:
+                </div>
 
-                  <ul>
-                    {QuizData.map((item, index) => (
-                      <li className="ui floating message options" key={index}>
-                        <div>{item.question}</div>
-                        <div className="textanswr">{`Correct Answer: ${item.answer}`}</div>
+                <ul>
+                  {QuizData.map((item, index) => (
+                    <li
+                      className="ui floating message card options"
+                      key={index}
+                    >
+                      <div className="textR"><strong>{item.numberQ}</strong></div>
+                      <div>{item.question}</div>
+                      <div className="textanswr">{`Correct Answer: ${item.answer}`}</div>
 
-                        <div>
-                          {item.info}{" "}
-                          <a
-                            rel="noopener noreferrer"
-                            href={item.links}
-                            target="_blank"
-                          >
-                            Read More
-                          </a>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </p>
-              </div>
+                      <div>
+                        {item.info}{" "}
+                        <a
+                          rel="noopener noreferrer"
+                          href={item.links}
+                          target="_blank"
+                        >
+                          Read More
+                        </a>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </p>
             </div>
           </div>
         </div>
@@ -210,3 +223,15 @@ export default class Questions extends Component {
     }
   }
 }
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  loginError: state.auth.loginError,
+});
+const mapActionCreators = {
+  loginUser,
+};
+
+export default connect(
+  mapStateToProps,
+  mapActionCreators
+)(withRouter(Questions));

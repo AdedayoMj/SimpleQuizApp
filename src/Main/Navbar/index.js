@@ -44,7 +44,7 @@ class Navbar extends Component {
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "white", width: "100px" } }}
         ></Sidebar>
-        <nav class="nav-extended">
+        <nav className="nav-extended">
           <div className="nav-wrapper white nav_cont ">
             <div className="container row ">
               <Link to="/" className="brand-logo col s1 m15">
@@ -54,9 +54,11 @@ class Navbar extends Component {
             </div>
             <div className="container">
               <div className="hide-on-med-and-up right">
-              
-                <button className="iconMat " onClick={() => this.onSetSidebarOpen(true)}>
-                <i className="large material-icons">apps</i>
+                <button
+                  className="iconMat "
+                  onClick={() => this.onSetSidebarOpen(true)}
+                >
+                  <i className="large material-icons">apps</i>
                 </button>
               </div>
             </div>

@@ -1,8 +1,21 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { loginUser } from "../../modules/auth";
+import { connect } from "react-redux";
 import "./Anatomy.css";
 
 class Anatomy extends Component {
+  componentDidUpdate() {
+    if (!this.props.isAuthenticated) {
+      this.props.history.push("./signin");
+    }
+  }
+  componentDidMount() {
+    if (!this.props.isAuthenticated) {
+      this.props.history.push("./signin");
+    }
+  }
+
   render() {
     const { history } = this.props;
     return (
@@ -35,4 +48,12 @@ class Anatomy extends Component {
     );
   }
 }
-export default withRouter(Anatomy);
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  loginError: state.auth.loginError,
+});
+const mapActionCreators = {
+  loginUser,
+};
+
+export default connect(mapStateToProps, mapActionCreators)(withRouter(Anatomy));
