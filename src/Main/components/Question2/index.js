@@ -108,23 +108,51 @@ class Questions2 extends Component {
     if (isFinished) {
       return (
         <div className="container main_cont">
-          <div className="result">
-            <h3 className="text">
-              {`Test finished !!!, your final score is ${scorePercent}%`}{" "}
-            </h3>
+          <div className="result card">
+          <h3 className="text center"> {`End of Quiz`} </h3>
+            <h3 className="text center">{`Your score is :${scorePercent}% out of 100%`}</h3>
             <div className=" card">
               {score > 2 ? (
                 <div>
                   <div className="text ">
-                    <i className="textanswr"> You passed !!!</i> . Go to{" "}
-                    <Link to="/"> Home page</Link>
+                  <h5 className="textanswr"> You passed !!!</h5>.
+                  <div>
+                  <Link to='/disease'>
+                    <button
+                      className="bts_l"
+                    >
+                      Attempt Again{" "}
+                    </button></Link>
+                  </div>
+                  <div>
+                  <Link to="/">
+                    <button
+                      className="bts_l"
+                    >
+                      Back Home{" "}
+                    </button></Link>
+                  </div>
                   </div>
                 </div>
               ) : (
                 <div className="text ">
-                  <i className="textanswr2"> You failed !!!</i>. Please click on
-                  home page button to try again.{" "}
-                  <Link to="/"> Go Back Home</Link>
+                <h5 className="textanswr"> You failed !!!</h5>.
+                  <div>
+                  <Link to='/disease'>
+                    <button
+                      className="bts_l"
+                    >
+                      Attempt Again{" "}
+                    </button></Link>
+                  </div>
+                  <div>
+                  <Link to="/">
+                    <button
+                      className="bts_l"
+                    >
+                      Back Home{" "}
+                    </button></Link>
+                  </div>
                 </div>
               )}
             </div>
